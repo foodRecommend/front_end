@@ -1,60 +1,48 @@
 import React from 'react';
-import Main from '../pages/Main';
-import NotFound from '../pages/NotFound';
-// import styled from "styled-components";
+import { Reset } from 'styled-reset';
+import {
+  Main,
+  LoginMain,
+  LoginProfile,
+  Bookmark,
+  Event,
+  MyPage,
+  MyPost,
+  MyReview,
+  Notice,
+  QnA,
+  UserInfo,
+  Community,
+  Review,
+  Search,
+  NotFound,
+  Map,
+} from '../pages/Index';
+// import styled from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import { ConnectedRouter } from 'connected-react-router';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
+      <Reset />
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Main} />
-          {/* <Route path="/guide" exact component={Guide} />
-                <Route path="/main" exact component={Main} />
-                <Route path="/oauth/callback/kakao" component={KakaoRedirect} />
-                <Route
-                  path="/oauth/callback/google"
-                  component={GoogleRedirect}
-                />
-                <Route path="/signupdone" exact component={SignupDone} />
-                <Route path="/signuploca" exact component={SignupLoca} />
-                <Route path="/addprofile" exact component={AddProfile} />
-                <Route path="/editprofile" exact component={EditProfile} />
-                <Route path="/postlist" exact component={PostList} />
-                <Route
-                  path="/postdetail/:postId"
-                  exact
-                  component={PostDetail}
-                />
-                <Route
-                  path="/ReviewList/:reviewId"
-                  exact
-                  component={ReviewList}
-                />
-                <Route path="/mypage" exact component={MyPage} />
-                <Route
-                  path="/reviewwrite/:postId"
-                  exact
-                  component={ReviewWrite}
-                />
-                <Route path="/reviewevalue" exact component={Evaluation} />
-                <Route path="/reviewdone" exact component={ReviewDone} />
-                <Route path="/mypost" exact component={MyPost} />
-                <Route path="/myreview" exact component={MyReview} />
-                <Route path="/map" exact component={Map} />
-                <Route path="/category" exact component={Category} />
-                <Route path="/done" exact component={Done} />
-                <Route path="/editdone" exact component={EditDone} />
-                <Route path="/postcategory" exact component={PostCategory} />
-                <Route path="/postwrite1" exact component={PostWrite_1} />
-                <Route path="/postwrite2" exact component={PostWrite_2} />
-                <Route path="/postwrite3" exact component={PostWrite_3} />
-                <Route path="/postwrite4" exact component={PostWrite_4} />
-                <Route path="/postdone" exact component={PostDone} />
-                <Route path="/ChatList" exact component={ChatList} />
-                <Route path="/chatex/:roomId" exact component={Chatex} /> */}
+          <Route path="/login" exact component={LoginMain} />
+          <Route path="/login/profile" exact component={LoginProfile} />
+          <Route path="/mypage/bookmark" exact component={Bookmark} />
+          <Route path="/mypage/event" exact component={Event} />
+          <Route path="/mypage" exact component={MyPage} />
+          <Route path="/mypage/post" exact component={MyPost} />
+          <Route path="/mypage/review" exact component={MyReview} />
+          <Route path="/mypage/qna" exact component={QnA} />
+          <Route path="/mypage/notice" exact component={Notice} />
+          <Route path="/mypage/userInfo" exact component={UserInfo} />
+          <Route path="/community" exact component={Community} />
+          <Route path="/review" exact component={Review} />
+          <Route path="/search" exact component={Search} />
+          <Route path="/map" exact component={Map} />
           <Route>
             <NotFound />
           </Route>
