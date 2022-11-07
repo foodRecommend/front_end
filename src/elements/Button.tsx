@@ -7,8 +7,8 @@ interface Iprops {
   text_color?: string;
   w?: string;
   h?: string;
-  margin?: string;
-  p?: string;
+  margin?: boolean;
+  p?: boolean;
   border: string;
   bold?: string;
   cr?: string;

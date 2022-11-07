@@ -1,11 +1,11 @@
 import React from 'react';
-// import { Button } from '@/elements/Index';
+import { Button } from '../elements/Index';
 
 const Main: React.FC = () => {
   return (
     <div>
       Main
-      {/* <Button text="test button" /> */}
+      <Button text="test button" />
     </div>
   );
 };
