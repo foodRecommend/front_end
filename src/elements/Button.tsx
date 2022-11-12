@@ -51,6 +51,7 @@ const ElButton = styled.button<Iprops>`
   width: 342px;
   height: 54px;
   background: #5796f7;
+  background: ${props => (props.bg ? '#ffffff' : '')};
   color: white;
   font-weight: bold;
   box-sizing: border-box;
