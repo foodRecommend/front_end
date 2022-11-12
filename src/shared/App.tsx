@@ -18,7 +18,6 @@ import {
   NotFound,
   Map,
 } from '../pages/Index';
-// import styled from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import { ConnectedRouter } from 'connected-react-router';
 
