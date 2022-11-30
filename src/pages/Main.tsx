@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Main: React.FC = () => {
   return (
     <div>
-      Main
+      Mainㅁㄴㅇㄹㅁㅇㄴㄹ
       <Button text="test button" />
       <img src={require('../assets/icons/ico_map.svg').default} />
       <img src={require('../assets/icons/ico_write.svg').default} />
