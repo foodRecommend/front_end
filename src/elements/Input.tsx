@@ -1,135 +1,111 @@
-// import React from "react";
-// import styled from "styled-components";
+// import React from 'react';
+// import styled from 'styled-components';
+// import { Text } from './Index';
 
-// import { Text, Grid } from "./Index";
+// // props 받아올 값의 type 을 선언
+// interface Iprops {
+//   text: string;
+//   text_color: string;
+//   w: string;
+//   h: string;
+//   margin: string;
+//   p: string;
+//   border: string;
+//   bold: string;
+//   cursor: string;
+//   bg: string;
+//   size: string;
+// }
 
-// const Input = (props) => {
+// const Input = (props: Iprops) => {
 //   const {
-//     label,
-//     placeholder,
-//     _onChange,
-//     type,
-//     multiLine,
-//     value,
-//     keyUp,
-//     keyPress,
-//     chatName,
-//     bold,
-//     size,
-//     width,
-//     height,
-//     wd,
-//     bg,
+//     text,
+//     text_color,
+//     w,
+//     h,
 //     margin,
-//     background,
+//     p,
+//     border,
+//     bold,
+//     cursor,
+//     bg,
+//     multiLine,
+//     size,
 //   } = props;
 
 //   const styles = {
-//     placeholder,
-//     onChange: _onChange,
-//     type,
-//     multiLine,
-//     keyUp,
-//     keyPress,
-//     chatName,
-//     bold,
-//     size,
-//     width,
-//     height,
-//     value,
-//     wd,
-//     bg,
-//     margin,
-//     background,
+//     text: text,
+//     text_color: text_color,
+//     width: w,
+//     height: h,
+//     margin: margin,
+//     padding: p,
+//     border: border,
+//     bold: bold,
+//     background: bg,
+//     color: text_color,
+//     cursor: cursor,
+//     multiLine: multiLine,
+//     size: size,
 //   };
-//   //플레이스홀더, 라벨속성 지정가능, onChange:_onChange로 지정
+
 //   if (multiLine) {
 //     return (
 //       <React.Fragment>
-//         {label && <Text margin="0px">{label}</Text>}
+//         {text && <Text margin="0px">{text}</Text>}
 //         <ElTextarea {...styles} rows={10}></ElTextarea>
 //       </React.Fragment>
 //     );
 //   }
 
-//   if (chatName) {
-//     return (
-//       <Grid>
-//         <ElChatName {...styles} />
-//       </Grid>
-//     );
-//   }
-
 //   return (
 //     <React.Fragment>
-//       {label && <Text margin="0px">{label}</Text>}
+//       {text && <Text margin="0px">{text}</Text>}
 //       <ElInput {...styles} />
 //     </React.Fragment>
 //   );
 // };
 
 // Input.defaultProps = {
-//   width: "390px",
+//   width: '390px',
 //   multiLine: false,
 //   label: false,
-//   placeholder: "텍스트를 입력해주세요.",
-//   type: "text",
-//   value: "",
-//   _onChange: () => {},
-//   keyUp: () => {},
-//   keyPress: () => {},
+//   placeholder: '텍스트를 입력해주세요.',
+//   type: 'text',
+//   value: '',
 //   bold: false,
 //   margin: false,
-//   maxLength: "10",
-//   background: "#F1F1F5",
+//   maxLength: '10',
+//   background: '#F1F1F5',
 // };
 
-// const ElTextarea = styled.textarea`
+// const ElTextarea = styled.textarea<Iprops>`
 //   border: none;
 //   border-radius: 5px;
-//   background: ${(props) => props.bg};
+//   background: ${props => props.bg};
 //   max-width: 420px;
 //   min-width: 330px;
 //   width: 340px;
-//   ${(
-//     props //성별/나이 input 창
-//   ) =>
-//     props.wd ? `width: 213px; background: white; border: 1px solid #ddd;` : ""};
-//   height: ${(props) => props.height};
+//   height: ${props => props.h};
 //   padding: 12px 10px;
 //   box-sizing: border-box;
-//   font-size: ${(props) => props.size};
-//   font-weight: ${(props) => props.bold};
+//   font-size: ${props => props.size};
+//   font-weight: ${props => props.bold};
 //   resize: none;
 // `;
 
 // //기본 Input
-// const ElInput = styled.input`
+// const ElInput = styled.input<Iprops>`
 //   border: none;
 //   border-radius: 5px;
 //   background: #f1f1f5;
-//   max-width: 420px;
-//   min-width: 330px;
 //   width: 340px;
-//   ${(
-//     props //성별/나이 input 창
-//   ) =>
-//     props.wd ? `width: 213px; background: white; border: 1px solid #ddd;` : ""};
-//   height: ${(props) => props.height};
+//   height: ${props => props.h};
 //   padding: 12px 10px;
 //   box-sizing: border-box;
-//   font-size: ${(props) => props.size};
-//   font-weight: ${(props) => props.bold};
-//   margin: ${(props) => props.margin};
-// `;
-
-// const ElChatName = styled.input`
-//   border: 1px solid #212121;
-//   width: ${(props) => props.width};
-//   padding: 12px 4px;
-//   box-sizing: border-box;
-//   font-size: ${(props) => props.size};
-//   font-weight: ${(props) => props.bold};
+//   font-size: ${props => props.size};
+//   font-weight: ${props => props.bold};
+//   margin: ${props => props.margin};
 // `;
 
 // export default Input;
